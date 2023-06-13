@@ -1,0 +1,41 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.5rem;
+  font-weight: bold;
+  transition: all .5s;
+  background: transparent;
+  border: .2rem solid var(--primary);
+  color: var(--primary);
+
+  &:hover {
+    background: var(--primary);
+    color: var(--white);
+  }
+
+  &Filled {
+    border: none;
+    background: var(--primary);
+    color: var(--white);
+
+    &:hover {
+      transform: scale(110%);
+    }
+  }
+
+  &S {
+    font-size: var(--s);
+    padding: .8rem 1.5rem;
+  }
+
+  &M {
+    font-size: var(--s);
+    padding: .8rem 2.5rem;
+  }
+
+  &L {
+    font-size: var(--m);
+    padding: 1rem 3rem;
+  }
+}

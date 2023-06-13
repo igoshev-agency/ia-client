@@ -4,7 +4,9 @@ import { NextIntlClientProvider } from 'next-intl'
 
 import '@/app/globals.scss'
 import { Providers } from '@/redux/Providers'
-import { IANavbar } from '@/components/layout'
+import { IANavbar, MenuItem } from '@/components/layout'
+import axios from 'axios'
+import { tc } from '@/utils/translateContent'
 
 const font = Nunito_Sans({ subsets: ['latin', 'cyrillic'] })
 
@@ -15,9 +17,13 @@ export const metadata = {
 
 export default async function RootLayout({ children, params }: { children: ReactNode, params: any }) {
 	let messages
+	let menu = []
 
 	try {
 		messages = (await import(`@/i18n/${params?.language || 'en'}.json`)).default
+
+		const { data } = await axios.get(`${process.env.API_FRONT_URL}/menu`)
+		menu = data ? tc(data, params?.language || 'en') : []
 	} catch (error) {
 		console.log(error)
 	}
@@ -28,7 +34,7 @@ export default async function RootLayout({ children, params }: { children: React
 		<NextIntlClientProvider locale={params?.language || 'en'} messages={messages}>
 			<Providers>
 				<div className="relative">
-					<IANavbar language={params?.language || 'en'} />
+					<IANavbar language={params?.language || 'en'} menu={menu} />
 					{children}
 				</div>
 			</Providers>

@@ -6,8 +6,13 @@ import Link from 'next/link'
 import { useEffect } from 'react'
 import { setLanguage } from '@/redux/settingsSlice'
 import { HiOutlineMenu } from 'react-icons/hi'
+import { IAButton } from '@/components/ui'
+import { useTranslations } from 'use-intl'
+import { IAMenu, MenuItem } from '@/components/layout/IAMenu'
+import { IALanguage } from '@/components/layout/IALanguage'
 
-export const IANavbar = ({ language }: { language: string }) => {
+export const IANavbar = ({ language, menu }: { language: string, menu: MenuItem[] }) => {
+	const t = useTranslations('Navbar')
 	const dispatch = useDispatch()
 
 	useEffect(() => {
@@ -23,7 +28,13 @@ export const IANavbar = ({ language }: { language: string }) => {
 				</div>
 			</Link>
 
-			<HiOutlineMenu className={styles.icon}/>
+			<IAMenu menu={menu}/>
+
+			<div className={styles.actions}>
+				<IALanguage />
+				<IAButton theme="filled" className={styles.button}>{t('Button')}</IAButton>
+				<HiOutlineMenu className={styles.burger}/>
+			</div>
 		</header>
 	)
 }

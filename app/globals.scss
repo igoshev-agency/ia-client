@@ -3,9 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --black-color: '#000000';
+  --black: #000000;
+  --white: #FFFFFF;
+  --primary: #F91942;
+  --gray: #191B20;
 
-  --text-base: 1.6rem;
+  --s: 1.6rem;
+  --m: 2.4rem;
+
+  --mobile: 375px;
 }
 
 html {
@@ -13,8 +19,9 @@ html {
 }
 
 body {
-  background: black;
-  color: white;
+  background: var(--black);
+  color: var(--white);
+  font-size: var(--s);
 }
 
 //:root {
