@@ -1,0 +1,21 @@
+@import "@/app/screens.scss";
+
+.menu {
+  align-items: center;
+  gap: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: none;
+
+  @include respond(tab-l) {
+    display: flex;
+  }
+}
+
+.item {
+  transition: all .5s;
+
+  &:hover {
+    color: var(--primary)
+  }
+}

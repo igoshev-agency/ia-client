@@ -1,3 +1,4 @@
-export * from './IANavbar'
-export * from  './IAMenu'
-export * from  './IALanguage'
+// export * from './IANavbar/IANavbar'
+export * from './IAMenu/IAMenu'
+export * from './IALanguage/IALanguage'
+export * from './IAMobileMenu/IAMobileMenu'

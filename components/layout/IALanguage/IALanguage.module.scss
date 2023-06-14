@@ -1,0 +1,70 @@
+@import "@/app/screens.scss";
+
+.language {
+  position: relative;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+  display: none;
+
+  @include respond(tab-l) {
+    display: flex;
+  }
+
+  &:hover span{
+    color: var(--primary);
+  }
+
+  &:hover .block {
+    display: flex;
+  }
+
+  span {
+    text-transform: capitalize;
+  }
+}
+
+.icon {
+  font-size: var(--m);
+  color: var(--primary);
+}
+
+.icon2 {
+  font-size: var(--m);
+  color: var(--white);
+}
+
+.block {
+  position: absolute;
+  transition: all .5s;
+  display: none;
+  padding-top: 3.3rem;
+  top: 0;
+  right: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item {
+  transition: all .5s;
+  text-transform: capitalize;
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+.mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  @include respond(tab-l) {
+    display: none;
+  }
+}

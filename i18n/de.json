@@ -1,5 +1,86 @@
 {
   "Navbar": {
-    "Button": "Start Projekt"
+    "button": "Start Projekt"
+  },
+  "Hero": {
+    "usp": "Bringen Sie das Geschäft auf eine neue Ebene",
+    "button": "Was bieten wir an"
+  },
+  "Services": {
+    "header": "Unsere Leistungen",
+    "button": "Im Detail",
+    "from": "ab"
+  },
+  "Projects": {
+    "header": "Unsere besten Projekte"
+  },
+  "About": {
+    "header": "Unsere Firma"
+  },
+  "Connection": {
+    "question": "Also, fangen wir an?!"
+  },
+  "Form": {
+    "question": "Also, fangen wir an?!",
+    "name": "Wie heißen Sie?",
+    "email": "Ihre E-Mail*",
+    "emailError": "Geben Sie eine gültige E-Mail ein",
+    "phone": "Ihre Handynummer",
+    "details": "Beschreiben Sie die Details des Projekts",
+    "attachment": "Dokument anhängen",
+    "button": "Projekt starten",
+
+    "development": "Entwicklung",
+    "design": "Design",
+    "branding": "Branding",
+    "promotion": "Förderung",
+    "service": "Bedienung",
+    "complex": "Komplex der Dienstleistungen",
+
+    "corporate": "Unternehmenswebsite",
+    "promo": "Promo-Website",
+    "landing": "Landingpage",
+    "serviceDev": "Service",
+    "ecommerce": "Online-Shop",
+
+    "designDes": "Website-Design",
+    "ui": "UI/UX Design",
+    "illustrate": "Bildmaterial",
+    "animate": "Animation",
+    "video": "Werbevideo",
+
+    "complexBra": "Komplex der Dienstleistungen",
+    "logo": "Logo",
+    "social": "Design von sozialen Netzwerken",
+    "offline": "Offline-Design",
+
+    "socialPro": "Förderung von sozialen Netzwerken",
+    "contextPro": "Kontextbezogene Werbung",
+    "seo": "SEO Förderung",
+    "semantic": "Semantik sammeln",
+
+    "fast": "Website beschleunigen",
+    "func": "Funktionsüberarbeitung",
+    "layout": "Layout nach Design",
+    "content": "Website-Ausfüllung",
+    "test": "Testen der Website",
+    "socialSer": "Verwalten von sozialen Netzwerken",
+    "text": "Schreiben von Texten",
+
+    "dev": "Schlüsselfertige Entwicklung",
+    "brandingCom": "Schlüsselfertiges Branding",
+    "promotionCom": "Schlüsselfertige Förderung",
+    "complexCom": "Entwicklung und Förderung",
+    "all": "Alles, was oben aufgeführt ist",
+
+    "sending": "Sendung...",
+    "weStart": "Wir fangen an!",
+    "startText": "Wir werden uns bald mit Ihnen in Verbindung setzen, um die Details des Projekts zu besprechen. Danke, dass Sie uns kontaktiert haben!",
+    "submitError": "Fehler! Ist nicht gegangen.",
+    "resend": "Erneut senden"
+  },
+  "Contacts": {
+    "header": "Unsere Kontakte",
+    "contactUs": "Kontaktiere uns"
   }
 }

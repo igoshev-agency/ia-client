@@ -1,6 +1,39 @@
-$mobile: 376px;
+$mobile: 375px;
 $tablet-m: 640px;
 $tablet-l: 768px;
 $desktop-s: 1024px;
 $desktop-m: 1280px;
 $desktop-l: 1536px;
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (min-width: 375px) {
+      @content;
+    }
+  }
+  @if $breakpoint == mobile {
+    @media (min-width: 640px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-s {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-l {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-s {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desctop-m {
+    @media (min-width: 1536px) {
+      @content;
+    }
+  }
+}

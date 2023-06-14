@@ -1,12 +1,12 @@
 import { ReactNode } from 'react'
 import { Nunito_Sans } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
+import axios from 'axios'
 
 import '@/app/globals.scss'
 import { Providers } from '@/redux/Providers'
-import { IANavbar, MenuItem } from '@/components/layout'
-import axios from 'axios'
 import { tc } from '@/utils/translateContent'
+import { IANavbar } from '@/components/layout/IANavbar/IANavbar'
 
 const font = Nunito_Sans({ subsets: ['latin', 'cyrillic'] })
 

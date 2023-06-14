@@ -1,5 +1,86 @@
 {
   "Navbar": {
-    "Button": "Start project"
+    "button": "Start project"
+  },
+  "Hero": {
+    "usp": "Take your business to a new level",
+    "button": "What we offer"
+  },
+  "Services": {
+    "header": "Our Services",
+    "button": "Details",
+    "from": "from"
+  },
+  "Projects": {
+    "header": "Our best Projects"
+  },
+  "About": {
+    "header": "Our Company"
+  },
+  "Connection": {
+    "question": "Well, shall we start?!"
+  },
+  "Form": {
+    "question": "Well, shall we start?!",
+    "name": "What's your name?",
+    "email": "Your email*",
+    "emailError": "Enter the correct email",
+    "phone": "Your phone number",
+    "details": "Describe the details of the project or attach a document",
+    "attachment": "Attach a document",
+    "button": "Start a project",
+
+    "development": "Development",
+    "design": "Design",
+    "branding": "Branding",
+    "promotion": "Promotion",
+    "service": "Service",
+    "complex": "Complex",
+
+    "corporate": "Corporate website",
+    "promo": "Promo website",
+    "landing": "Landing page",
+    "serviceDev": "Service",
+    "ecommerce": "E-commerce",
+
+    "designDes": "Website design",
+    "ui": "UI/UX design",
+    "illustrate": "Illustrations",
+    "animate": "Animation",
+    "video": "Promotional video",
+
+    "complexBra": "Complex of services",
+    "logo": "Logo",
+    "social": "Social media design",
+    "offline": "Offline design",
+
+    "socialPro": "Promotion of social networks",
+    "contextPro": "Contextual advertising",
+    "seo": "SEO promotion",
+    "semantic": "Collecting semantics",
+
+    "fast": "Website acceleration",
+    "func": "Functional refinement",
+    "layout": "Layout by design",
+    "content": "Website content",
+    "test": "Website testing",
+    "socialSer": "Maintaining social networks",
+    "text": "Writing texts",
+
+    "dev": "Turnkey development",
+    "brandingCom": "Turnkey branding",
+    "promotionCom": "Turnkey promotion",
+    "complexCom": "Development and promotion",
+    "all": "All of the above",
+
+    "sending": "Sending...",
+    "weStart": "We're starting!",
+    "startText": "We will contact you soon to discuss the details of the project. Thank you for contacting us!",
+    "submitError": "Error! It didn't go.",
+    "resend": "Resend"
+  },
+  "Contacts": {
+    "header": "Our Contacts",
+    "contactUs": "Contact us"
   }
 }

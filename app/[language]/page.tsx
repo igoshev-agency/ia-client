@@ -1,5 +1,9 @@
-export default function Home() {
+import { IAHero } from '@/components/sections/IAHero/IAHero'
+
+export default async function Home() {
   return (
-    <div>Hello</div>
+    <main>
+      <IAHero />
+    </main>
   )
 }
