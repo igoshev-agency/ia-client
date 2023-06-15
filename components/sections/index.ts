@@ -1,3 +1,4 @@
 export * from './IASection'
 // export * from './IAHero'
-export * from './IAServices'
+export * from './IAServices/IAServices'
+export * from './IAProjects/IAProjects'

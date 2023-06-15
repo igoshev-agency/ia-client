@@ -1,0 +1,27 @@
+.card {
+  @apply flex flex-col w-full;
+}
+
+.wrapper {
+  @apply relative rounded-[2.5rem] cursor-pointer;
+}
+
+.tilt {
+  @apply rounded-[2.5rem] transition-all duration-500 ease-in bg-gray;
+}
+
+.title {
+  @apply text-m md:text-l font-bold text-primary;
+}
+
+.desc {
+  @apply mt-[2rem] text-sm md:text-m font-light;
+}
+
+.tags {
+  @apply flex gap-[1rem] md:gap-[2rem] mt-[2.2rem] flex-wrap;
+}
+
+.tag {
+  @apply text-s font-light;
+}
