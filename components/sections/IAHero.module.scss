@@ -1,0 +1,27 @@
+.section {
+  @apply relative h-screen w-screen;
+}
+
+.container {
+  @apply h-full w-full px-[3rem] flex flex-col justify-center;
+}
+
+.usp {
+  @apply absolute top-0 left-0 w-full h-full px-[3rem] flex flex-col justify-center items-center z-10;
+}
+
+.title {
+  @apply mt-[2rem] text-l font-bold text-center;
+}
+
+.planet {
+  @apply w-full h-full flex justify-center items-center;
+}
+
+.earth {
+  @apply -mt-[20rem] w-[35rem] h-[35rem] cursor-pointer;
+}
+
+.video {
+  @apply absolute top-0 left-0 w-screen h-screen -z-10 object-cover;
+}

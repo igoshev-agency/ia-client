@@ -1,69 +1,31 @@
-@import "@/app/screens.scss";
-
 .navbar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 8rem;
-  padding: 0 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 50;
-  background-color: #000000;
+  @apply fixed top-0 left-0 w-full h-[8rem] px-[3rem] flex justify-between items-center z-50 bg-black;
 }
 
 .logo {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+  @apply flex items-center cursor-pointer;
 
   img {
-    width: 2rem;
-    height: 2rem;
-
-    @include respond(desktop-s) {
-      width: 3rem;
-      height: 3rem;
-    }
+    @apply w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem];
   }
 
   span {
-    margin-left: 1rem;
-    text-transform: uppercase;
-    font-weight: bold;
-
-    @include respond(desktop-s) {
-      font-size: var(--m);
-    }
+    @apply ml-[1rem] uppercase font-bold lg:text-m;
   }
 }
 
 .actions {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-
-  @include respond(tab-l) {
-    gap: 5rem;
-  }
+  @apply flex items-center gap-[3rem] md:gap-[5rem];
 }
 
 .action {
   display: none !important;
 
-  @include respond(mobile) {
+  @media (min-width: 640px) {
     display: flex !important;
   }
 }
 
 .burger {
-  cursor: pointer;
-  font-size: 2.8rem;
-  display: flex;
-
-  @include respond(tab-l) {
-    display: none;
-  }
+  @apply flex text-[2.8rem] cursor-pointer md:hidden;
 }

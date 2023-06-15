@@ -1,21 +1,7 @@
-@import "@/app/screens.scss";
-
 .menu {
-  align-items: center;
-  gap: 3rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: none;
-
-  @include respond(tab-l) {
-    display: flex;
-  }
+  @apply hidden items-center gap-[3rem] uppercase font-bold lg:flex;
 }
 
 .item {
-  transition: all .5s;
-
-  &:hover {
-    color: var(--primary)
-  }
+  @apply transition-all duration-500 hover:text-primary;
 }

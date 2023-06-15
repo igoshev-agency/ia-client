@@ -1,4 +1,4 @@
-import { IAHero } from '@/components/sections/IAHero/IAHero'
+import { IAHero } from '@/components/sections/IAHero'
 
 export default async function Home() {
   return (

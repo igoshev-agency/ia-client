@@ -1,0 +1,19 @@
+.button {
+  @apply flex justify-center items-center bg-transparent rounded-full font-bold transition-all duration-500 border-[.2rem] border-primary text-primary hover:bg-primary hover:text-white;
+}
+
+.filled {
+  @apply border-none bg-primary text-white hover:scale-110;
+}
+
+.s {
+  @apply text-s py-[.8rem] px-[1.5rem];
+}
+
+.m {
+  @apply text-s py-[.8rem] px-[2.5rem];
+}
+
+.l {
+  @apply text-m py-[1rem] px-[3rem];
+}

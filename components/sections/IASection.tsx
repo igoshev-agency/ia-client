@@ -18,7 +18,7 @@ export const IASection = ({ children, hash, full = false, className }: SectionPr
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true, amount: 0.1 }}
-			className={cn({ ['container mx-auto']: !full }, className)}
+			className={cn({ ['container']: !full }, className)}
 		>
 			{hash &&<div id={hash}/>}
 			{children}

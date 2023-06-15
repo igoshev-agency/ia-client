@@ -1,4 +1,4 @@
-import styles from './ui.module.scss'
+import styles from './IAButton.module.scss'
 import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react'
 import cn from 'classnames'
 
@@ -14,10 +14,10 @@ export const IAButton = ({ children, size = 'm', theme = 'outline', color = 'pri
 		<button className={cn(
 			styles.button,
 			{
-				[styles.buttonFilled]: theme === 'filled',
-				[styles.buttonS]: size === 's',
-				[styles.buttonM]: size === 'm',
-				[styles.buttonL]: size === 'l',
+				[styles.filled]: theme === 'filled',
+				[styles.s]: size === 's',
+				[styles.m]: size === 'm',
+				[styles.l]: size === 'l',
 			},
 			className
 		)} { ...props } >

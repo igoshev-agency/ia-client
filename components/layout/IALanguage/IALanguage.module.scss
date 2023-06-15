@@ -1,70 +1,39 @@
-@import "@/app/screens.scss";
-
 .language {
-  position: relative;
-  align-items: center;
-  gap: .5rem;
-  cursor: pointer;
-  display: none;
+  @apply relative hidden items-center gap-[.5rem] cursor-pointer md:flex;
 
-  @include respond(tab-l) {
-    display: flex;
+  span {
+    @apply capitalize;
   }
 
-  &:hover span{
-    color: var(--primary);
+  &:hover span {
+    @apply text-primary;
   }
 
   &:hover .block {
-    display: flex;
-  }
-
-  span {
-    text-transform: capitalize;
+    @apply flex;
   }
 }
 
 .icon {
-  font-size: var(--m);
-  color: var(--primary);
+  @apply text-m text-primary;
 }
 
-.icon2 {
-  font-size: var(--m);
-  color: var(--white);
+.icon_mobile {
+  @apply text-m text-white;
 }
 
 .block {
-  position: absolute;
-  transition: all .5s;
-  display: none;
-  padding-top: 3.3rem;
-  top: 0;
-  right: 0;
+  @apply absolute top-0 right-0 pt-[3.3rem] hidden transition-all duration-500;
 }
 
 .list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  @apply flex flex-col gap-[1rem];
 }
 
 .item {
-  transition: all .5s;
-  text-transform: capitalize;
-
-  &:hover {
-    color: var(--primary);
-  }
+  @apply transition-all duration-500 capitalize hover:text-primary;
 }
 
 .mobile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-
-  @include respond(tab-l) {
-    display: none;
-  }
+  @apply flex justify-center items-center gap-[3rem] md:hidden;
 }

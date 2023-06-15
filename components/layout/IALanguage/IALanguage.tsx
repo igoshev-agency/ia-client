@@ -44,7 +44,7 @@ export const IALanguage = ({ isMobile = false }: { isMobile?: boolean }) => {
 
 			{isMobile &&
 				<div className={styles.mobile}>
-					<MdOutlineLanguage className={styles.icon2} />
+					<MdOutlineLanguage className={styles.icon_mobile} />
 					<span>{language}</span>
 					{languages?.map(lang => (
 						<span key={lang} onClick={() => onLanguageSwitch(lang)}>{lang}</span>
