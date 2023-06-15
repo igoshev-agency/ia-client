@@ -1,0 +1,11 @@
+.about {
+  @apply mt-[5rem] md:mt-[10rem] flex flex-wrap gap-y-[3rem] md:gap-y-[5rem] items-center justify-around xl:justify-between;
+}
+
+.block {
+  @apply flex flex-col justify-between text-m md:text-l font-light min-w-[25rem] md:w-[40%] xl:w-auto;
+}
+
+.value {
+  @apply text-xl lg:text-2xl xl:text-xl 2xl:text-2xl font-bold text-primary mr-[2rem]
+}
