@@ -1,0 +1,8 @@
+.header {
+  @apply inline-block font-light text-l sm:text-xl;
+  //text-2xl
+
+  span {
+    @apply text-primary font-bold;
+  }
+}

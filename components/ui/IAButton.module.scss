@@ -15,5 +15,5 @@
 }
 
 .l {
-  @apply text-m py-[1rem] px-[3rem];
+  @apply text-s py-[.8rem] px-[2.5rem] sm:text-m sm:py-[1rem] sm:px-[3rem];
 }

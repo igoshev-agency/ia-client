@@ -24,8 +24,59 @@ body {
   @apply bg-black text-white text-s;
 }
 
-.container {
+.my-container {
   @apply mx-[3rem];
+}
+
+.perspective {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+}
+
+.card:hover .card-front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+.card-front {
+  transform: rotateY(0deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: all 1s ease-out;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: all 1s ease-out;
+}
+
+.card-back-content {
+  transform: rotateY(180deg);
+}
+
+::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+}
+
+.loader {
+  border: 3px solid #FFFFFF;
+  border-top: 3px solid #F91942;
+  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 //:root {

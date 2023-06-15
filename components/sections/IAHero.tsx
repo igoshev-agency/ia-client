@@ -21,12 +21,12 @@ export const IAHero = async () => {
 
 				<div className={styles.planet}>
 					<div className={styles.earth}>
-						<IAEarthCanvas />
+						{/*<IAEarthCanvas />*/}
 					</div>
 				</div>
 			</div>
 			<video
-				src={`/video/stars.mov`}
+				src={`/videos/stars.mov`}
 				loop
 				muted
 				autoPlay
