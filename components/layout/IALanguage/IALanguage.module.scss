@@ -1,5 +1,5 @@
 .language {
-  @apply relative hidden items-center gap-[.5rem] cursor-pointer md:flex;
+  @apply relative hidden items-center gap-[.5rem] cursor-pointer lg:flex;
 
   span {
     @apply capitalize;
@@ -35,5 +35,5 @@
 }
 
 .mobile {
-  @apply flex justify-center items-center gap-[3rem] md:hidden;
+  @apply flex justify-center items-center gap-[3rem] lg:hidden overflow-hidden;
 }

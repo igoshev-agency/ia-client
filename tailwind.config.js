@@ -10,8 +10,8 @@ module.exports = {
       s: '1.6rem',
       m: '2.4rem',
       l: '3.2rem',
-      '2xl': '4.8rem',
-      '3xl': '6.4rem'
+      'xl': '4.8rem',
+      '2xl': '6.4rem'
     },
     extend: {
       backgroundImage: {

@@ -7,19 +7,19 @@
 }
 
 .usp {
-  @apply absolute top-0 left-0 w-full h-full px-[3rem] flex flex-col justify-center items-center z-10;
+  @apply absolute top-0 left-0 w-full h-full px-[3rem] mt-[10rem] lg:mt-0 flex flex-col justify-center items-center z-10 md:items-start md:w-2/3;
 }
 
 .title {
-  @apply mt-[2rem] text-l font-bold text-center;
+  @apply mt-[2rem] text-l sm:text-xl xl:text-2xl font-bold text-center md:text-left;
 }
 
 .planet {
-  @apply w-full h-full flex justify-center items-center;
+  @apply w-full h-full flex justify-center items-center md:justify-end overflow-hidden;
 }
 
 .earth {
-  @apply -mt-[20rem] w-[35rem] h-[35rem] cursor-pointer;
+  @apply w-[35rem] h-[35rem] sm:w-[50rem] sm:h-[50rem] md:w-[60rem] md:h-[60rem] lg:w-[70rem] lg:h-[70rem] 2xl:w-[80prm] 2xl:h-[80rem] cursor-pointer -mt-[10rem] lg:mt-[5rem] md:-mr-[5rem] 2xl:mr-0;
 }
 
 .video {

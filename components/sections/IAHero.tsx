@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'use-intl'
-import { IASection } from '@/components/sections/IASection'
+import { IASection } from '@/components/sections'
 import { IAButton } from '@/components/ui'
 import { IAEarthCanvas } from '@/components/canvas'
 import styles from './IAHero.module.scss'
@@ -21,7 +21,7 @@ export const IAHero = async () => {
 
 				<div className={styles.planet}>
 					<div className={styles.earth}>
-						{/*<IAEarthCanvas />*/}
+						<IAEarthCanvas />
 					</div>
 				</div>
 			</div>

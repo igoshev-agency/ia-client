@@ -6,11 +6,11 @@
   @apply flex items-center cursor-pointer;
 
   img {
-    @apply w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem];
+    @apply w-[2rem] h-[2rem] xl:w-[3rem] xl:h-[3rem];
   }
 
   span {
-    @apply ml-[1rem] uppercase font-bold lg:text-m;
+    @apply ml-[1rem] uppercase font-bold xl:text-m;
   }
 }
 
@@ -27,5 +27,5 @@
 }
 
 .burger {
-  @apply flex text-[2.8rem] cursor-pointer md:hidden;
+  @apply flex text-[2.8rem] cursor-pointer lg:hidden;
 }
