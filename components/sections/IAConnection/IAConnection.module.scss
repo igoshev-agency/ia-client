@@ -1,0 +1,33 @@
+.section {
+  @apply relative overflow-hidden;
+}
+
+.position {
+  @apply mt-[5rem] px-[3rem];
+}
+
+.wrapper {
+  @apply pt-[5rem] md:pt-[10rem] lg:pt-0 flex flex-col xl:flex-row justify-between;
+}
+
+.rocket {
+  @apply flex justify-center items-center w-full xl:w-1/2;
+
+  img {
+    @apply h-[45rem] lg:h-[60rem] xl:h-[70rem] hover:scale-110 rotate-12 lg:rotate-45 xl:rotate-12 transition-all duration-1000;
+  }
+
+  &:hover {
+    img {
+      @apply scale-110;
+    }
+  }
+}
+
+.form {
+  @apply w-full xl:w-1/2;
+}
+
+.video {
+  @apply w-screen h-full absolute top-0 left-0 -z-10 object-cover;
+}

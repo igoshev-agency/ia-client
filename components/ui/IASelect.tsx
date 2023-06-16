@@ -1,16 +1,17 @@
 'use client'
 
-import { DetailedHTMLProps, InputHTMLAttributes, useState } from 'react'
+import { DetailedHTMLProps, HTMLAttributes, useState } from 'react'
 import cn from 'classnames'
 import { TbSelect } from 'react-icons/tb'
 import { motion } from 'framer-motion'
+import styles from './IASelect.module.scss'
 
 export interface Option {
 	title: string
 	value: string
 }
 
-interface InputProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+interface InputProps extends DetailedHTMLProps<HTMLAttributes<HTMLInputElement>, HTMLInputElement> {
 	value: { title: string, value: string }
 	setValue: any
 	options: Option[]
@@ -27,15 +28,15 @@ export const IASelect = ({ value, setValue, options, className, ...props }: Inpu
 	return (
 		<div className="w-full h-full relative">
 			<input
-				className={cn('bg-transparent text-l font-light w-full border-b border-white pb-[.5rem] outline-none', className)}
+				className={cn(styles.input, className)}
 				defaultValue={value.title}
 				{...props}
 			/>
 			<div
-				className="absolute w-full h-[4rem] flex justify-end top-[.5rem] right-0 text-base cursor-pointer"
+				className={styles.wrapper}
 				onClick={() => setOpened(state => !state)}
 			>
-				<div className="pl-[1rem] bg-gray h-[4rem] flex items-center">
+				<div className={styles.icon}>
 					<TbSelect />
 				</div>
 			</div>

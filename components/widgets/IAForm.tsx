@@ -8,6 +8,7 @@ import { DetailedHTMLProps, HTMLAttributes, useRef, useState } from 'react'
 import axios from 'axios'
 import { useTranslations } from 'use-intl'
 import cn from 'classnames'
+import styles from './IAForm.module.scss'
 
 interface FormProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	hasTitle?: boolean
@@ -158,11 +159,11 @@ export const IAForm = ({ hasTitle = false, isModal = false, visible = false, clo
 
 	return (
 		<div className={cn({
-			['w-screen h-screen fixed top-0 left-0 z-50 flex justify-center items-center backdrop-blur-sm overflow-y-auto transition-all duration-500']: isModal,
+			[styles.modal]: isModal,
 			['opacity-100 visible']: visible && isModal,
 			['opacity-0 invisible']: !visible && isModal
 		})}>
-			<div className={cn('flex flex-col justify-start', {
+			<div className={cn(styles.modal, {
 				['w-1/2']: isModal,
 				['w-full']: !isModal
 			})}>
@@ -171,16 +172,16 @@ export const IAForm = ({ hasTitle = false, isModal = false, visible = false, clo
 						max: 15,
 						speed: 1000
 					}}
-					className="transition-all duration-500 ease-in"
+					className={styles.tilt}
 				>
-					{hasTitle && <h3 className="text-2xl font-bold">{t('question')}</h3>}
+					{hasTitle && <h3 className={styles.title}>{t('question')}</h3>}
 					<form
-						className="flex flex-col mt-[10rem] px-[5rem] py-[8rem] mb-[10rem] bg-gray rounded-[2.5rem] w-full gap-[7rem] min-h-[67rem]"
+						className={styles.form}
 						onSubmit={handleSubmit(onSubmit)}
 					>
 						{!hasTitle &&
-							<div className="w-full flex justify-end -mt-[3rem]">
-								<AiOutlineClose className="cursor-pointer text-xl hover:text-primary transition-all duration-500" onClick={close} />
+							<div className={styles.close}>
+								<AiOutlineClose className={styles.close_icon} onClick={close} />
 							</div>
 						}
 						{!sent && !loading &&
@@ -189,7 +190,7 @@ export const IAForm = ({ hasTitle = false, isModal = false, visible = false, clo
 									register={{ ...register('name') }}
 									placeholder={t('name')}
 								/>
-								<div className="flex justify-between gap-[3.5rem]">
+								<div className={styles.fields}>
 									<div className="relative w-full">
 										<IAInput
 											type="email"
@@ -201,7 +202,7 @@ export const IAForm = ({ hasTitle = false, isModal = false, visible = false, clo
 												})
 											}}
 										/>
-										<div className="absolute top-[5rem] left-0 text-primary text-s font-light">
+										<div className={styles.error}>
 											{!isValid && touchedFields.email &&
 												<span>{t('emailError')}</span>
 											}
@@ -215,7 +216,7 @@ export const IAForm = ({ hasTitle = false, isModal = false, visible = false, clo
 										}}
 									/>
 								</div>
-								<div className="flex justify-between gap-[3.5rem]">
+								<div className={styles.fields}>
 									<IASelect
 										options={typeOptions}
 										value={type}
@@ -229,30 +230,30 @@ export const IAForm = ({ hasTitle = false, isModal = false, visible = false, clo
 								</div>
 								<IAInput placeholder={t('details')}
 								       register={{ ...register('desc') }}/>
-								<div className="flex justify-between gap-[3.5rem] flex-wrap">
+								<div className={styles.actions}>
 									<div
-										className="flex items-center cursor-pointer hover:text-primary transition-all duration-500 relative"
-										onClick={() => ref.current.click()}>
+										className={styles.attachment}
+										onClick={() => ref?.current?.click()}>
 										{!file &&
 											<>
 												<input type="file" onChange={fileChange} ref={ref} multiple className="invisible absolute"/>
-												<AiOutlinePaperClip className="text-l"/>
-												<div className="ml-[1.5rem] text-l font-light">{t('attachment')}</div>
+												<AiOutlinePaperClip className={styles.attachment_icon}/>
+												<div className={styles.attachment_text}>{t('attachment')}</div>
 											</>
 										}
 										{file &&
-											<div className="flex items-center">
-												<span className="text-l font-light">{file.name}</span>
-												<AiOutlineCloseCircle className="ml-[1rem] text-l" onClick={() => setFile(null)}/>
+											<div className={styles.file}>
+												<span className={styles.file_name}>{file.name}</span>
+												<AiOutlineCloseCircle className={styles.file_icon} onClick={() => setFile(null)}/>
 											</div>
 										}
 									</div>
-									<IAButton size="l" type="submit">{t('button')}</IAButton>
+									<IAButton size="l" type="submit" className={styles.button}>{t('button')}</IAButton>
 								</div>
 							</>
 						}
 						{loading &&
-							<div className="flex justify-center items-center w-full h-[67rem] text-l">
+							<div className={styles.sending}>
 								<div className="flex items-center">
 									<div className="loader"/>
 									<div className="ml-[1rem] font-light">{t('sending')}</div>
@@ -260,8 +261,8 @@ export const IAForm = ({ hasTitle = false, isModal = false, visible = false, clo
 							</div>
 						}
 						{!loading && success && sent &&
-							<div className="flex flex-col gap-[7rem] justify-center items-start w-full h-[67rem] text-l">
-								<h3 className="text-xl">{t('weStart')}</h3>
+							<div className={styles.success}>
+								<h3 className={styles.success_title}>{t('weStart')}</h3>
 								<span className="font-light">{t('startText')}</span>
 							</div>
 						}

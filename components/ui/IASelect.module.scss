@@ -1,0 +1,11 @@
+.input {
+  @apply bg-transparent text-sm lg:text-m font-light w-full border-b border-white pb-[.5rem] outline-none;
+}
+
+.wrapper {
+  @apply absolute w-full h-[3rem] lg:h-[5rem] flex justify-end top-[.5rem] lg:top-0 right-0 text-s lg:text-sm cursor-pointer;
+}
+
+.icon {
+  @apply pl-[1rem] bg-gray h-[2rem] lg:h-[4rem] flex items-center;
+}
