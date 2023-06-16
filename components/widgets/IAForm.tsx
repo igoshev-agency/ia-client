@@ -98,7 +98,7 @@ export const IAForm = ({ hasTitle = false, isModal = false, visible = false, clo
 
 	const ref = useRef(null)
 
-	const fileChange = (e) => {
+	const fileChange = (e: any) => {
 		setFile(e.target.files[0])
 	}
 
@@ -159,12 +159,12 @@ export const IAForm = ({ hasTitle = false, isModal = false, visible = false, clo
 
 	return (
 		<div className={cn({
-			[styles.modal]: isModal,
+			['w-screen h-screen fixed top-0 left-0 z-50 flex justify-center items-center backdrop-blur-sm overflow-y-auto transition-all duration-500']: isModal,
 			['opacity-100 visible']: visible && isModal,
 			['opacity-0 invisible']: !visible && isModal
 		})}>
 			<div className={cn(styles.modal, {
-				['w-1/2']: isModal,
+				['w-full lg:w-1/2']: isModal,
 				['w-full']: !isModal
 			})}>
 				<Tilt

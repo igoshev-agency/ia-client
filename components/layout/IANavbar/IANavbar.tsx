@@ -9,15 +9,21 @@ import { HiOutlineMenu } from 'react-icons/hi'
 import { IAButton } from '@/components/ui'
 import { useTranslations } from 'use-intl'
 import { IAMenu, IALanguage, IAMobileMenu, MenuItem } from '@/components/layout'
+import { IAForm } from '@/components/widgets'
 
 export const IANavbar = ({ language, menu }: { language: string, menu: MenuItem[] }) => {
 	const t = useTranslations('Navbar')
 	const dispatch = useDispatch()
+	const [isModal, setIsModal] = useState(false)
 	const [isMenuOpened, setIsMenuOpened] = useState(false)
 
 	useEffect(() => {
 		dispatch(setLanguage(language))
 	}, [])
+
+	const closeModal = () => {
+		setIsModal(false)
+	}
 
 	const menuClose = () => {
 		setIsMenuOpened(false)
@@ -37,11 +43,12 @@ export const IANavbar = ({ language, menu }: { language: string, menu: MenuItem[
 
 				<div className={styles.actions}>
 					<IALanguage />
-					<IAButton theme="filled" className={styles.action}>{t('button')}</IAButton>
+					<IAButton theme="filled" className={styles.action} onClick={() => setIsModal(true)}>{t('button')}</IAButton>
 					<HiOutlineMenu className={styles.burger} onClick={() => setIsMenuOpened(true)}/>
 				</div>
 			</header>
 
+			<IAForm isModal close={closeModal} visible={isModal} />
 			<IAMobileMenu menu={menu} visible={isMenuOpened} onClose={menuClose}/>
 		</>
 	)

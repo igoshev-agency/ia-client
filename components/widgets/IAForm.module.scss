@@ -23,7 +23,7 @@
 }
 
 .close_icon {
-  @apply cursor-pointer text-xl hover:text-primary transition-all duration-500;
+  @apply cursor-pointer text-m md:text-l hover:text-primary transition-all duration-500;
 }
 
 .fields {
