@@ -21,7 +21,7 @@ export const IAHero = async () => {
 
 				<div className={styles.planet}>
 					<div className={styles.earth}>
-						{/*<IAEarthCanvas />*/}
+						<IAEarthCanvas />
 					</div>
 				</div>
 			</div>

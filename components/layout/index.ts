@@ -2,4 +2,5 @@
 export * from './IAMenu/IAMenu'
 export * from './IALanguage/IALanguage'
 export * from './IAMobileMenu/IAMobileMenu'
-export * from  './IAHeader/IAHeader'
+export * from './IAHeader/IAHeader'
+export * from './IACookies'

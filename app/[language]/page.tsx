@@ -3,6 +3,7 @@ import { IAHero } from '@/components/sections/IAHero/IAHero'
 import { IAAbout, IAConnection, IAContacts, IAProjects, IAServices, Info } from '@/components/sections'
 import { Project, Service } from '@/components/widgets'
 import { tc } from '@/utils/translateContent'
+import { IACookies } from '@/components/layout'
 
 export default async function Home({ params }: any) {
 	let services: Service[] = []
@@ -30,6 +31,7 @@ export default async function Home({ params }: any) {
 			<IAAbout info={info} />
 			<IAConnection />
 			<IAContacts />
+			<IACookies />
 		</main>
 	)
 }
