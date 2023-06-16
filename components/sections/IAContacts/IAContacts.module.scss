@@ -1,0 +1,35 @@
+.wrapper {
+  @apply flex flex-col xl:flex-row justify-between xl:items-center;
+}
+
+.contact {
+  @apply ml-[1rem] text-m md:text-l font-light;
+}
+
+.messengers {
+  @apply flex flex-col lg:flex-row mt-[5rem] xl:flex-col 2xl:flex-row lg:mt-[10rem] xl:mt-0 lg:items-center xl:items-start 2xl:items-center gap-[4rem] lg:gap-[8rem] xl:gap-[4rem] 2xl:gap-[8rem];
+
+  &_icon {
+    @apply text-l md:text-[4rem];
+  }
+
+  &_name {
+    @apply ml-[2rem] text-sm md:text-m;
+  }
+
+  &_wrapper {
+    @apply flex flex-col sm:flex-row gap-[4rem] md:gap-[8rem];
+  }
+}
+
+.footer {
+  @apply flex flex-col sm:flex-row sm:justify-between sm:items-center mt-[8rem] lg:mt-[10rem] gap-[4rem] md:gap-0;
+}
+
+.social {
+  @apply flex items-center gap-[2rem] text-[2.8rem];
+}
+
+.copyright {
+  @apply text-m md:text-l font-light;
+}

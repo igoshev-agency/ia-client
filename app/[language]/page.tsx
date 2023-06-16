@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { IAHero } from '@/components/sections/IAHero/IAHero'
-import { IAAbout, IAConnection, IAProjects, IAServices, Info } from '@/components/sections'
+import { IAAbout, IAConnection, IAContacts, IAProjects, IAServices, Info } from '@/components/sections'
 import { Project, Service } from '@/components/widgets'
 import { tc } from '@/utils/translateContent'
 
@@ -29,6 +29,7 @@ export default async function Home({ params }: any) {
 			<IAProjects projects={projects} />
 			<IAAbout info={info} />
 			<IAConnection />
+			<IAContacts />
 		</main>
 	)
 }
