@@ -24,6 +24,9 @@ module.exports = {
       colors: {
         'primary': '#F91942',
         'gray': '#191B20'
+      },
+      screens: {
+        '3xl': '1800px'
       }
     },
   },

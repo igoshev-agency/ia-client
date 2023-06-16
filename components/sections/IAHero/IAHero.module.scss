@@ -2,8 +2,8 @@
   @apply relative h-screen w-screen;
 }
 
-.container {
-  @apply h-full w-full px-[3rem] flex flex-col justify-center;
+.hero {
+  @apply h-full w-full px-[3rem] flex flex-col justify-center container mx-auto relative;
 }
 
 .usp {

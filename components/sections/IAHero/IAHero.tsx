@@ -11,7 +11,7 @@ export const IAHero = async () => {
 
 	return (
 		<IASection hash='hero' full={true} className={styles.section}>
-			<div className={styles.container}>
+			<div className={styles.hero}>
 				<div className={styles.usp}>
 					<h1 className={styles.title}>{t('usp')}</h1>
 					<div>
@@ -21,7 +21,7 @@ export const IAHero = async () => {
 
 				<div className={styles.planet}>
 					<div className={styles.earth}>
-						{/*<IAEarthCanvas />*/}
+						<IAEarthCanvas />
 					</div>
 				</div>
 			</div>
