@@ -18,13 +18,13 @@ interface FormProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HT
 }
 
 export interface IFormInput {
-	name?: String
-	email?: String
-	phone?: String
-	type?: any
-	service?: any
-	desc?: String
-	file?: any
+	name: String
+	email: String
+	phone: String
+	type: String
+	service: String
+	desc: String
+	file: File
 }
 
 export const IAForm = ({ hasTitle = false, isModal = false, visible = false, close }: FormProps) => {
@@ -95,11 +95,13 @@ export const IAForm = ({ hasTitle = false, isModal = false, visible = false, clo
 	const [type, setType] = useState<Option>({ ...typeOptions[0] })
 	const [service, setService] = useState<Option>({ ...developmentOptions[0] })
 	const [file, setFile] = useState(null)
+	const [fileName, setFileName] = useState('')
 
-	const ref = useRef(null)
+	const ref = useRef<HTMLInputElement>(null)
 
 	const fileChange = (e: any) => {
 		setFile(e.target.files[0])
+		setFileName(e.target.files[0].name)
 	}
 
 	const onSubmit: SubmitHandler<IFormInput> = async (form) => {
@@ -108,13 +110,13 @@ export const IAForm = ({ hasTitle = false, isModal = false, visible = false, clo
 
 		const formData = new FormData()
 
-		formData.append('name', form.name)
-		formData.append('email', form.email)
-		formData.append('phone', form.phone)
-		formData.append('desc', form.desc)
+		formData.append('name', form.name.toString())
+		formData.append('email', form.email.toString())
+		formData.append('phone', form.phone.toString())
+		formData.append('desc', form.desc.toString())
 		formData.append('type', type.title)
 		formData.append('service', service.title)
-		if (file) formData.append('file', file, file?.originalname)
+		if (file) formData.append('file', file)
 
 		try {
 			const { data } = await axios.post(`http://localhost:4000/api/order`, formData)
@@ -243,7 +245,7 @@ export const IAForm = ({ hasTitle = false, isModal = false, visible = false, clo
 										}
 										{file &&
 											<div className={styles.file}>
-												<span className={styles.file_name}>{file.name}</span>
+												<span className={styles.file_name}>{fileName}</span>
 												<AiOutlineCloseCircle className={styles.file_icon} onClick={() => setFile(null)}/>
 											</div>
 										}
